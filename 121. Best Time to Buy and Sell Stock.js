@@ -2,7 +2,7 @@
  * @param {number[]} prices
  * @return {number}
  */
-var maxProfit = function(prices) {
+/*var maxProfit = function(prices) {
     var max = 0;
     for (var i = 0; i < prices.length; i++) {
     	for (var j = i + 1; j < prices.length; j++) {
@@ -14,4 +14,19 @@ var maxProfit = function(prices) {
     	}
     }
     return max;
-};
+};*/
+var maxProfit = function(prices) {
+	var min = Number.MAX_VALUE;
+	var profit = 0;
+	for (var i = 0; i < prices.length; i++) {
+		if (prices[i] < min) {
+			min = prices[i];
+		}
+
+		var calprofit = prices[i] - min;
+		if (calprofit > profit) {
+			profit = calprofit;
+		}
+	}
+	return profit;
+}
