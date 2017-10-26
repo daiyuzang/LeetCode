@@ -13,7 +13,7 @@ var containsNearbyDuplicate = function(nums, k) {
     	}
     	else{
     		m = Math.abs(arr[nums[i]] - i);
-    		console.log(m);
+    		//console.log(m);
     		break;
     	}
     }
