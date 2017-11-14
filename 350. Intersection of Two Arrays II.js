@@ -18,10 +18,7 @@ var intersect = function(nums1, nums2) {
         else if (nums1[i] > nums2[j])
             j++;
         else {
-            if (nums1[i] != flag) {
-                arr.push(nums1[i]);
-                flag = nums1[i];
-            }
+            arr.push(nums1[i]);
             i++;
             j++;
         }
