@@ -3,6 +3,32 @@
  * @param {string} magazine
  * @return {boolean}
  */
+/*
+var canConstruct = function (ransomNote, magazine) {
+    var objran = {};
+    for (var i = 0; i < ransomNote.length; i++) {
+        if (objran[ransomNote[i]] === undefined) {
+            objran[ransomNote[i]] = 1;
+        } else {
+            objran[ransomNote[i]]++;
+        }
+    }
+    var str1, str2;
+    for (var j = 0; j < magazine.length; j++) {
+        if (objran[magazine[j]] === 0) {
+            objran[magazine[j]] = 0;
+        } else if (objran[magazine[j]] !== undefined) {
+            objran[magazine[j]]--;
+            magazine = magazine.substring(0, j - 1) + magazine.substring(j + 1, magazine.length);
+            j--;
+        }
+    }
+    for (var i = 0; i < ransomNote.length; i++) {
+        if (objran[ransomNote[j]] !== 0)
+            return false;
+    }
+    return true;
+};*/
 var canConstruct = function (ransomNote, magazine) {
     var objran = {};
     for (var i = 0; i < ransomNote.length; i++) {
